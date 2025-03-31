@@ -26,10 +26,16 @@ F = Bright White
 int main ()
 {
     system ("color C0");
-    int rpm ;
+    int rpm , exit = 1 ;
     welcome ();
-    rpm = random () ;
-    printf("%d\n", rpm);
+    while(exit)
+    {
+        rpm = random () ;
+        printf("%d\n", rpm);
+        printf("Want to play more press '1'\n");
+        printf("For Exit press '0': ");
+        scanf("%d",&exit);
+    }
 
     return 0;
 }
